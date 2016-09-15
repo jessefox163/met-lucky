@@ -1,0 +1,28 @@
+<template name="reactiveDic">
+    <h2>reactive-dict</h2>
+    <h5>instance #1</h5>
+    {{>reactiveForm2}}
+    <h5>instance #2</h5>
+    {{>reactiveForm2}}
+</template>
+
+<template name="reactiveForm2">
+    <div>
+        <select class="form-control">
+            <option value="hide">Hide Extra Fields</option>
+            <option value="hide">Show Extra Fields</option>
+        </select>
+    </div>
+    <br/>
+    {{#if isShow}}
+        <div  clas="form-group">
+            <label>Another Field</label>
+            <input class="form-control" type="text">
+        </div>
+        <br/>
+        <div  clas="form-group">
+            <label>OneMore Field</label>
+            <input class="form-control" type="text">
+        </div>
+    {{/if}}
+</template>
